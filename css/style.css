@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 50px;
+    background-color: rgb(225, 228, 233);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+#h1 {
+    padding: 30px 10px;
+    font-size: 2.8rem; 
+    color: rgb(49, 57, 70);
+}
+
+#subtitulo {
+    padding-bottom: 15px;
+    color: goldenrod;
+}
+
+#jogarContraAmigo, #jogarContraAI, #botaoJogarNovamente, #botaoReset {
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    box-sizing: border-box; 
+    cursor: pointer; 
+    box-shadow: 3px 3px 3px rgba(145, 145, 145, 0.555); 
+    transition: 300ms;
+}
+
+.jogarContraContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#jogarContraAmigo, #jogarContraAI {
+    width: 200px;
+    margin: 0 10px 30px 10px;
+    padding: 5px;
+    display: flex; 
+    align-items: center;
+}
+
+#jogarContraAmigo, #jogarContraAI {
+    background-color: #A3CDD9;
+}
+
+#jogarContraAmigo:hover, #jogarContraAI:hover {
+    background-color: #bbd7df;
+}
+
+#jogarContraAmigo:active, #jogarContraAI:active {
+    transform: translateY(4px); 
+}
+
+.emoji {
+    font-size: 3rem;
+}
+
+.jogarContraTexto {
+    font-size: 1.1rem;
+    font-weight: 500;  
+}
+
+#tabuleiro { 
+    display: grid;
+    grid-template: auto auto auto/ auto auto auto;
+    justify-content: center;
+}
+
+.celula {
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgb(49, 57, 70);
+    background-color: white;
+    cursor: pointer; 
+    box-shadow: 5px 5px 5px rgb(145, 145, 145);   
+    transition: 100ms;
+}
+
+.celula:hover {
+    background-color: whitesmoke;
+}
+
+.o::after {
+    content: "\🛡️";
+    font-size: 4rem;
+    line-height: 150px;
+    color: goldenrod;
+}
+
+.x::after {
+    content: "\2694️";
+    font-size: 3.5rem;
+    line-height: 150px;
+    color: rgb(165, 177, 182);
+}
+
+.placarContainer {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(49, 57, 70);
+}
+
+.placarContainer p {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#placarEscudo, #placarEspadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#placarEscudo p, #placarEspadas p {
+    font-family: 'Agency FB', sans-serif;
+}
+
+#botaoReset {
+    width: 460px;
+    margin: 15px auto 0 auto;
+    padding: 5px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #506AD4;
+}
+
+#botaoReset:active {
+    width: 455px;
+    transform: translateY(3px);
+}
+
+#botaoJogarNovamente:hover {
+    background-color: #6f85dd; 
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        height: 100vh;
+    }
+    #jogarContraAmigo, #jogarContraAI {
+        width: 150px;
+        flex-direction: column;
+    }
+
+    .jogarContraTexto {
+        font-size: 1rem;
+    }
+
+    .celula {
+        width: 100px;
+        height: 100px;
+    }
+
+    .o::after {
+        font-size: 3.5rem;
+        line-height: 100px;
+    }
+
+    .x::after {
+        font-size: 3rem;
+        line-height: 100px;
+    }
+
+    .placarContainer p {
+        margin: 0 5px;
+        font-size: 1.4rem;
+    }
+
+    #placarEscudo, #placarEspadas {
+        width: 55px;
+        height: 40px;
+    }
+
+    #botaoReset {
+        width: 300px;
+        margin-top: 0;
+        font-size: 1.1rem;
+    }
+
+    #botaoReset:active {
+        width: 295px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #jogarContraAmigo, #jogarContraAI {
+        width: 100px;
+    }
+
+    .jogarContraTexto {
+        font-size: 0.8rem;
+    }
+
+    .celula {
+        width: 80px;
+        height: 80px;
+    }
+
+    .o::after {
+        font-size: 3rem;
+        line-height: 80px;
+    }
+
+    .x::after {
+        font-size: 2.5rem;
+        line-height: 80px;
+    }
+
+    .placarContainer h2 {
+        font-size: 1.3rem;
+    }
+
+    .placarContainer p {
+        font-size: 1.3rem;
+    }
+
+    #placarEscudo, #placarEspadas {
+        width: 45px;
+        height: 30px;
+    }
+
+    #botaoReset {
+        width: 250px;
+        margin-top: 0;
+        font-size: 1.1rem;
+    }
+
+    #botaoReset:active {
+        width: 245px;
+    }
+}

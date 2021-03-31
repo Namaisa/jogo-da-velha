@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Jogo da velha</title>
+</head>
+
+<body>
+    <h1 id="h1">Jogo da velha</h1>
+
+    <h2 id="subtitulo">SELECIONE UM MODO DE JOGO:</h2>
+
+    <div class="jogarContraContainer">
+        <button id="jogarContraAmigo" onclick="jogarContraAmigo()">
+            <div class="emoji">👥</div>
+            <div class="jogarContraTexto">Jogar contra amigo (local)</div>
+        </button>
+
+        <button id="jogarContraAI" onclick="jogarContraAI()">
+            <div class="emoji">🤖</div>
+            <div class="jogarContraTexto">Jogar contra AI</div>
+        </button>
+    </div>
+
+    <div id="tabuleiro">
+        <div id="0" class="celula"></div>
+        <div id="1" class="celula"></div>
+        <div id="2" class="celula"></div>
+        <div id="3" class="celula"></div>
+        <div id="4" class="celula"></div>
+        <div id="5" class="celula"></div>
+        <div id="6" class="celula"></div>
+        <div id="7" class="celula"></div>
+        <div id="8" class="celula"></div>
+    </div>
+
+    <div class="placarContainer">
+        <h2>PLACAR:</h2>
+        <p id="emojiEscudoPlacar"></p>
+        <div id="placarEscudo" class="placar">
+            <p>0</p>
+        </div>
+        <p>X</p>
+        <div id="placarEspadas" class="placar">
+            <p>0</p>
+        </div>
+        <p>⚔</p>
+    </div>
+
+    <input 
+        id="botaoReset" onclick="reiniciarJogo()" 
+        type="button" value="REINICIAR JOGO"
+    >
+    
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/interface.js"></script>
+    <script src="./scripts/seletorTabuleiro.js"></script>    
+</body>
+</html>
